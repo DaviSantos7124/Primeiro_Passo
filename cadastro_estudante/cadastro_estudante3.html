@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+        }
+
+        main {
+            width: 35%;
+            min-height: 100vh;
+            background-color: #002546;
+
+            display: flex;
+            justify-content: center;
+        }
+
+        .conteudo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 80%;
+        }
+
+        .logo {
+            margin-top: 50px;
+            width: 320px;
+            height: 130px;
+        }
+
+        main h1 {
+            color: white;
+            text-align: center;
+            width: 90%;
+        }
+
+        .beneficio {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 15px;
+            width: 70%;
+            margin-top: 20px;
+        }
+
+        .icone {
+            background-color: #1A80D5;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+       .icone img {
+            width: 38px;
+            height: 38px;
+            object-fit: contain;
+        } 
+
+        .texto-beneficio {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .texto-beneficio h3 {
+            color: white;
+            margin: 0 0 5px 0;
+        }
+
+        .texto-beneficio p {
+            color: rgba(255, 255, 255, 0.649);
+            margin: 0;
+        }
+
+        .login {
+            width: 60%;
+            min-height: 100vh;
+
+            display: flex;
+            flex-direction: column;
+            padding-left: 50px;
+
+        }
+
+
+        .login h1 {
+            color: #1F2937;
+        }
+
+        .inter {
+            font-family: "Inter", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 600;
+            font-style: normal;
+        }
+
+        .inter-pequeno {
+            font-family: "Inter", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 300;
+            font-style: normal;
+        }
+
+
+        .inter-pequeno_maior {
+            font-family: "Inter", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 350;
+            font-style: normal;
+        }
+
+        .inter-medio {
+            font-family: "Inter", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 450;
+            font-style: normal;
+        }
+
+        .bola {
+            background-color: #1A80D5;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .bola h3 {
+            color: white;
+            margin: 0;
+
+        }
+
+        .campo-cadastro {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 50px;
+            border: 2px solid #CACACA;
+            border-radius: 10px;
+            padding: 0 12px;
+            margin-top: 0px;
+            margin-bottom: 20px;
+             box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+
+        }
+
+        .campo-cadastro i {
+            color: #777;
+            font-size: 24px;
+        }
+
+        .campo-cadastro input {
+            width: 100%;
+            height: 100%;
+            border: none;
+            outline: none;
+
+            font-size: 18px;
+        }
+
+
+
+
+
+        
+        .botoes-cadastro {
+            display: flex;
+            gap: 40px;
+            width: 100%;
+            margin-top: 60px;
+        }
+
+        .botoes-cadastro button {
+            flex: 1;
+            height: 50px;
+            border-radius: 10px;
+            font-size: 20px;
+
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn-voltar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background-color: #fff;
+            color: #2185d5;
+            border: 2px solid #2185d5;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-voltar:hover {
+            background-color: #f0f7ff;
+            box-shadow: 0 3px 7px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-voltar i {
+            font-size: 22px;
+        }
+
+
+        .btn-avancar {
+            background-color: #2185d5;
+            color: #fff;
+            border: 2px solid #2185d5;
+            gap: 12px;
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-avancar:hover {
+            background-color: #176eb5;
+            border-color: #176eb5;
+        }
+
+        .botoes-cadastro button:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+
+        <div class="conteudo">
+
+            <img src="logo.png" class="logo">
+
+            <h1 class="inter">
+                O primeiro passo para o seu
+                futuro profissional.
+            </h1>
+
+            <div class="beneficio">
+
+                <div class="icone"></div>
+
+                <div class="texto-beneficio">
+                    <h3 class="inter-medio">Encontre vagas</h3>
+
+                    <p class="inter-pequeno">
+                        Explore oportunidades de primeiro emprego, estágio e Jovem Aprendiz.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="beneficio">
+
+                <div class="icone"></div>
+
+                <div class="texto-beneficio">
+                    <h3 class="inter-medio">Crie seu currículo</h3>
+
+                    <p class="inter-pequeno">
+                        Monte um currículo simples e profissional
+                        em poucos minutos.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="beneficio">
+
+                <div class="icone"></div>
+
+                <div class="texto-beneficio">
+                    <h3 class="inter-medio">Acompanhe suas candidaturas</h3>
+
+                    <p class="inter-pequeno">
+                        Veja o status das suas inscrições e não
+                        perca nenhuma oportunidade.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <section class="login">
+
+        <h1 class="inter-medio" style=" margin-top:20px;">Cadastro da empresa</h1>
+        <h5 style="color: #1f293797; width:80%;margin-top: 10px;" class="inter-pequeno_maior">Vamos começar com os dados
+            da sua empresa.</h5>
+        <div class="row" style="align-items: center;margin-top: 20px;">
+            <div class="bola" style="background-color: #DCDDDF;">
+                <h3 style="color:#1F2937" class="inter-medio">1</h3>
+            </div>
+            <div style="background-color: #A4A4A4;width:24%;height:1px; "> </div>
+          <div class="bola" style="background-color: #DCDDDF;">
+                <h3 style="color:#1F2937" class="inter-medio">2</h3>
+            </div>
+            <div style="background-color: #A4A4A4;width:24%;height:1px; "> </div>
+               <div class="bola">
+                <h3 style="color: rgb(255, 255, 255);" class="inter-medio">3</h3>
+            </div>
+            <div style="background-color: #A4A4A4;width:24%;height:1px; "> </div>
+            <div class="bola" style="background-color: #DCDDDF;">
+                <h3 style="color:#1F2937" class="inter-medio">4</h3>
+            </div>
+
+        </div>
+
+        <h2 class="inter-medio" style=" margin-top:45px;">Responsável</h2>
+        <form>
+            <label style="color: #1F2937; width:80%;margin-top: 10px; font-size:20px;" class="inter-medio">Nome completo</label>
+            <div class="campo-cadastro inter-medio">
+                <i class="bi bi-person"></i>
+                <input type="text" placeholder="Digite o nome completo">
+            </div>
+
+            <label style="color: #1F2937; width:80%;margin-top: 10px; font-size:20px;" class="inter-medio">Cargo na empresa</label>
+            <div class="campo-cadastro inter-medio">
+                <i class="bi bi-person"></i>
+                <input type="text" placeholder="Ex: Gerente de RH, Diretor, etc.">
+            </div>
+             <label style="color: #1F2937; width:80%;margin-top: 10px; font-size:20px;" class="inter-medio">E-mail de contato</label>
+            <div class="campo-cadastro inter-medio">
+               
+<i class="bi bi-house-door-fill"></i>
+                <input type="text" placeholder="exemplo@gmail.com">
+            </div>
+
+
+ <label style="color: #1F2937; width:80%;margin-top: 10px; font-size:20px;" class="inter-medio">Telefone</label>
+            <div class="campo-cadastro inter-medio">
+                 <i class="bi bi-telephone"></i>
+                <input type="text" placeholder="(00) 00000-0000">
+            </div>
+          
+
+            </div>
+     <div class="botoes-cadastro">
+                <button type="submit" name="Voltar" class="btn-voltar">
+                    <i class="bi bi-arrow-left"></i>
+                    Voltar
+                </button>
+
+                <button type="submit" name="Avançar" class="btn-avancar">
+                    Avançar
+                    <i class="bi bi-arrow-right"></i>
+                </button>
+            </div>
+
+        </form>
+        <h5 style="color: #1f293797; width:80%;margin-top: 10px;" class="inter-pequeno_maior"></h5>
+
+        <div style="background-color: #A4A4A4;width:100%;height:1px; margin-top:100px;"></div>
+        <strong style="color: #A4A4A4; margin-top:10px;text-align: center; width:90%;">© 2026 Primeiro Passo - Todos os
+            direitos reservados.</strong>
+    </section>
+
+</body>
+
+</html>

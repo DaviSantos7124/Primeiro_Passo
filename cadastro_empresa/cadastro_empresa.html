@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+        }
+
+        main {
+            width: 35%;
+            min-height: 100vh;
+            background-color: #002546;
+
+            display: flex;
+            justify-content: center;
+        }
+
+        .conteudo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 80%;
+        }
+
+        .logo {
+            margin-top: 50px;
+            width: 320px;
+            height: 130px;
+        }
+
+        main h1 {
+            color: white;
+            text-align: center;
+            width: 90%;
+        }
+
+        .beneficio {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 15px;
+            width: 70%;
+            margin-top: 20px;
+        }
+
+        .icone {
+            background-color: #1A80D5;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .icone img {
+            width: 38px;
+            height: 38px;
+            object-fit: contain;
+        }
+
+        .texto-beneficio {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .texto-beneficio h3 {
+            color: white;
+            margin: 0 0 5px 0;
+        }
+
+        .texto-beneficio p {
+            color: rgba(255, 255, 255, 0.649);
+            margin: 0;
+        }
+
+        .login {
+            width: 60%;
+            min-height: 100vh;
+
+            display: flex;
+            flex-direction: column;
+            padding-left: 50px;
+
+        }
+
+
+        .login h1 {
+            color: #1F2937;
+        }
+
+        .inter {
+            font-family: "Inter", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 600;
+            font-style: normal;
+        }
+
+        .inter-pequeno {
+            font-family: "Inter", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 300;
+            font-style: normal;
+        }
+
+
+        .inter-pequeno_maior {
+            font-family: "Inter", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 350;
+            font-style: normal;
+        }
+
+        .inter-medio {
+            font-family: "Inter", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 450;
+            font-style: normal;
+        }
+
+        .bola {
+            background-color: #1A80D5;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .bola h3 {
+            color: white;
+            margin: 0;
+
+        }
+
+        .campo-cadastro {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 50px;
+            border: 2px solid #CACACA;
+            border-radius: 10px;
+            padding: 0 12px;
+            margin-top: 0px;
+            margin-bottom: 20px;
+
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .campo-cadastro i {
+            color: #777;
+            font-size: 24px;
+        }
+
+        .campo-cadastro input {
+            width: 100%;
+            height: 100%;
+            border: none;
+            outline: none;
+
+            font-size: 18px;
+        }
+
+
+
+        .grupo-campo {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            min-width: 0;
+        }
+
+        .grupo-campo label {
+            color: #1F2937;
+            margin-top: 10px;
+            margin-bottom: 8px;
+            font-size: 18px;
+        }
+
+        .campo-cadastro2 {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 50px;
+            border: 2px solid #CACACA;
+            border-radius: 10px;
+            padding: 0 12px;
+            margin: 0 0 20px;
+            box-sizing: border-box;
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .campo-cadastro2 i {
+            color: #777;
+            font-size: 22px;
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+
+        .campo-cadastro2 input {
+            width: 100%;
+            min-width: 0;
+            height: 100%;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            background: transparent;
+        }
+
+        .row-campo {
+
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 20px;
+            width: 100%;
+
+        }
+
+
+        .botoes-cadastro {
+            display: flex;
+            gap: 40px;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .botoes-cadastro button {
+            flex: 1;
+            height: 50px;
+            border-radius: 10px;
+            font-size: 20px;
+
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn-voltar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background-color: #fff;
+            color: #2185d5;
+            border: 2px solid #2185d5;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-voltar:hover {
+            background-color: #f0f7ff;
+            box-shadow: 0 3px 7px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-voltar i {
+            font-size: 22px;
+        }
+
+
+        .btn-avancar {
+            background-color: #2185d5;
+            color: #fff;
+            border: 2px solid #2185d5;
+            gap: 12px;
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-avancar:hover {
+            background-color: #176eb5;
+            border-color: #176eb5;
+        }
+
+        .botoes-cadastro button:active {
+            transform: scale(0.98);
+        }
+
+
+
+        #nomeFantasia,
+        #razaosocial {
+            text-transform: capitalize;
+        }
+      
+.erro-campo {
+    color: #dc3545;
+    font-size: 13px;
+    display: block;
+    min-height: 0;
+    margin-top: -15px;
+    margin-bottom: 15px;
+}
+
+.erro-campo:empty {
+    display: none;
+}
+.grupo-campo .erro-campo {
+    margin-top: -14px;
+}
+
+.campo-invalido {
+    border-color: #dc3545 !important;
+    box-shadow: 0 0 5px rgba(220, 53, 69, 0.35) !important;
+}
+
+.campo-valido {
+    border-color: #28a745 !important;
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.3) !important;
+}
+    </style>
+</head>
+
+<body>
+
+    <main>
+
+        <div class="conteudo">
+
+            <img src="../Imagem/logo.png" alt="" class="logo">
+
+            <h1 class="inter">
+                O primeiro passo para o seu
+                futuro profissional.
+            </h1>
+
+            <div class="beneficio">
+
+                <div class="icone">
+                    <img src="../Imagem/account_circle.png" alt="">
+                </div>
+
+                <div class="texto-beneficio">
+                    <h3 class="inter-medio">Encontre vagas</h3>
+
+                    <p class="inter-pequeno">
+                        Explore oportunidades de primeiro emprego, estágio e Jovem Aprendiz.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="beneficio">
+
+                <div class="icone">
+                    <img src="../Imagem/edit.png" alt="">
+                </div>
+
+                <div class="texto-beneficio">
+                    <h3 class="inter-medio">Crie seu currículo</h3>
+
+                    <p class="inter-pequeno">
+                        Monte um currículo simples e profissional
+                        em poucos minutos.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="beneficio">
+
+                <div class="icone">
+                    <img src="../Imagem/Black.png" alt="">
+                </div>
+
+                <div class="texto-beneficio">
+                    <h3 class="inter-medio">Acompanhe suas candidaturas</h3>
+
+                    <p class="inter-pequeno">
+                        Veja o status das suas inscrições e não
+                        perca nenhuma oportunidade.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <section class="login">
+
+        <h1 class="inter-medio" style=" margin-top:20px;">Cadastro da empresa</h1>
+        <h5 style="color: #1f293797; width:80%;margin-top: 10px;" class="inter-pequeno_maior">Vamos começar com os dados
+            da sua empresa.</h5>
+        <div class="row" style="align-items: center;margin-top: 20px;">
+            <div class="bola">
+                <h3 style="color: rgb(255, 255, 255);" class="inter-medio">1</h3>
+            </div>
+            <div style="background-color: #A4A4A4;width:24%;height:1px; "> </div>
+            <div class="bola" style="background-color: #DCDDDF;">
+                <h3 style="color:#1F2937" class="inter-medio">2</h3>
+            </div>
+            <div style="background-color: #A4A4A4;width:24%;height:1px; "> </div>
+            <div class="bola" style="background-color: #DCDDDF;">
+                <h3 style="color:#1F2937" class="inter-medio">3</h3>
+            </div>
+            <div style="background-color: #A4A4A4;width:24%;height:1px; "> </div>
+            <div class="bola" style="background-color: #DCDDDF;">
+                <h3 style="color:#1F2937" class="inter-medio">4</h3>
+            </div>
+
+        </div>
+
+        <h2 class="inter-medio" style=" margin-top:45px;">Dados da empresa</h2>
+        <form method="post" id="formulario" novalidate>
+            <div class="grupo-campo">
+            <label style="color: #1F2937; width:80%;margin-top: 10px; font-size:20px;" class="inter-medio">Razão social
+                ou nome empresarial</label>
+            <div class="campo-cadastro inter-medio">
+                <i class="bi bi-person" style="font-size:30px;"></i>
+                <input required type="text" id="razaosocial" placeholder="Ex: Empresa LTDA">
+                
+            </div>
+            </div>
+
+            
+
+
+            <label style="color: #1F2937; width:80%;margin-top: 10px; font-size:20px;" class="inter-medio">Nome
+                Fantasia</label>
+            <div class="campo-cadastro inter-medio">
+                <i class="bi bi-person" style="font-size:30px;"></i>
+                <input required type="text" id="nomeFantasia" placeholder="Ex: Minha Empresa">
+               
+            </div>
+  <span class="erro-campo" id="erro-nomeFantasia"></span>
+
+            <div class="row-campo">
+                <div class="grupo-campo">
+                    <label class="inter-medio">CNPJ (se aplicável)</label>
+
+                    <div class="campo-cadastro2 inter-medio">
+                        <i class="bi bi-building"></i>
+                        <input required type="text" id="cnpj" placeholder="Ex: 00.000.000/0000-00">
+                        
+                    </div>
+                    <span class="erro-campo"></span>
+                </div>
+
+                <div class="grupo-campo">
+                    <label class="inter-medio">E-mail corporativo</label>
+
+                    <div class="campo-cadastro2 inter-medio">
+                        <i class="bi bi-telephone"></i>
+                        <input required type="email" id="email" placeholder="exemplo@gmail.com">
+                        
+                    </div>
+                    <span class="erro-campo"></span>
+                </div>
+            </div>
+
+
+            <div class="row-campo">
+                <div class="grupo-campo">
+                    <label class="inter-medio">Telefone</label>
+
+                    <div class="campo-cadastro2 inter-medio">
+                        <i class="bi bi-telephone"></i>
+                        <input required id="celular" type="tel" placeholder="(00) 00000-0000">
+                    
+                    </div>
+                    <span class="erro-campo"></span>
+                </div>
+
+                <div class="grupo-campo">
+                    <label class="inter-medio">Senha</label>
+
+                    <div class="campo-cadastro2 inter-medio">
+                        <i class="bi bi-lock"></i>
+                        <input required type="password" id="senha" placeholder="Crie uma senha">
+                    </div>
+
+                    <label class="inter-medio">Confirmar senha</label>
+
+                    <div class="campo-cadastro2 inter-medio">
+                        <i class="bi bi-lock"></i>
+                        <input required type="password" placeholder="Confirme sua senha">
+                    </div>
+                </div>
+            </div>
+
+            <div class="botoes-cadastro">
+                <button type="submit" name="Voltar" class="btn-voltar">
+                    <i class="bi bi-arrow-left"></i>
+                    Voltar
+                </button>
+
+                <button type="submit" name="Avançar" class="btn-avancar">
+                    Avançar
+                    <i class="bi bi-arrow-right"></i>
+                </button>
+            </div>
+
+        </form>
+
+        <h5 style="color: #1f293797; width:80%;margin-top: 10px;" class="inter-pequeno_maior"></h5>
+
+        <div style="background-color: #A4A4A4;width:90%;height:1px; margin-top:111px;"></div>
+        <strong style="color: #A4A4A4; margin-top:10px;text-align: center; width:90%;">© 2026 Primeiro Passo - Todos os
+            direitos reservados.</strong>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+
+
+ 
+      <script>
+        
+            $('#celular').mask('(00) 00000-0000');
+            $('#cnpj').mask('00.000.000/0000-00');
+   
+
+        const formulario = document.getElementById('formulario');
+        const mensagemSucesso = document.getElementById('mensagem-sucesso');
+
+      
+        function validarCNPJ(valor) {
+            const cnpj = valor.replace(/\D/g, '');
+
+            if (cnpj.length !== 14 || /^(\d)\1{13}$/.test(cnpj)) {
+                return false;
+            }
+
+            function calcularDigito(base, pesos) {
+                let soma = 0;
+
+                for (let i = 0; i < pesos.length; i++) {
+                    soma += Number(base[i]) * pesos[i];
+                }
+
+                const resto = soma % 11;
+                return resto < 2 ? 0 : 11 - resto;
+            }
+
+            const pesosPrimeiro = [5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2];
+            const primeiroDigito = calcularDigito(cnpj, pesosPrimeiro);
+
+            if (primeiroDigito !== Number(cnpj[12])) {
+                return false;
+            }
+
+            const pesosSegundo = [6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2];
+            const segundoDigito = calcularDigito(cnpj, pesosSegundo);
+
+            return segundoDigito === Number(cnpj[13]);
+        }
+
+        function validarCampo(input) {
+            const valor = input.value.trim();
+            let mensagem = '';
+
+            switch (input.id) {
+                case 'razaosocial':
+                    if (!valor) {
+                        mensagem = 'Informe a razão social.';
+                    } else if (valor.length < 3) {
+                        mensagem = 'Digite pelo menos 3 caracteres.';
+                    }
+                    break;
+
+                case 'nomeFantasia':
+                    if (!valor) {
+                        mensagem = 'Informe o nome fantasia.';
+                    } else if (valor.length < 2) {
+                        mensagem = 'Digite pelo menos 2 caracteres.';
+                    }
+                    break;
+
+                case 'cnpj':
+                    if (valor !== '' && !validarCNPJ(valor)) {
+                        mensagem = 'Informe um CNPJ válido.';
+                    }
+                    break;
+
+                case 'email':
+                    if (!valor) {
+                        mensagem = 'Informe o e-mail corporativo.';
+                    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(valor)) {
+                        mensagem = 'Informe um endereço de e-mail válido.';
+                    }
+                    break;
+
+                case 'celular': {
+                    const numeros = valor.replace(/\D/g, '');
+
+                    if (!valor) {
+                        mensagem = 'Informe o telefone.';
+                    } else if (numeros.length !== 11) {
+                        mensagem = 'Informe o telefone com DDD e 11 dígitos.';
+                    } else if (/^(\d)\1{10}$/.test(numeros)) {
+                        mensagem = 'Informe um telefone válido.';
+                    }
+                    break;
+                }
+
+                case 'senha':
+                    if (!valor) {
+                        mensagem = 'Crie uma senha.';
+                    } else if (valor.length < 8) {
+                        mensagem = 'A senha deve ter pelo menos 8 caracteres.';
+                    } else if (!/[A-Z]/.test(valor)) {
+                        mensagem = 'Inclua pelo menos uma letra maiúscula.';
+                    } else if (!/[a-z]/.test(valor)) {
+                        mensagem = 'Inclua pelo menos uma letra minúscula.';
+                    } else if (!/[0-9]/.test(valor)) {
+                        mensagem = 'Inclua pelo menos um número.';
+                    } else if (!/[^A-Za-z0-9]/.test(valor)) {
+                        mensagem = 'Inclua pelo menos um caractere especial.';
+                    }
+                    break;
+
+                case 'confirmar-senha':
+                    if (!valor) {
+                        mensagem = 'Confirme sua senha.';
+                    } else if (valor !== document.getElementById('senha').value) {
+                        mensagem = 'As senhas não coincidem.';
+                    }
+                    break;
+            }
+
+            const caixa = input.closest('.campo-cadastro, .campo-cadastro2');
+            const erro = document.getElementById('erro-' + input.id);
+
+            if (erro) {
+                erro.textContent = mensagem;
+            }
+
+            if (caixa) {
+                caixa.classList.toggle('campo-invalido', mensagem !== '');
+                caixa.classList.toggle('campo-valido', mensagem === '' && valor !== '');
+            }
+
+            input.setAttribute('aria-invalid', mensagem ? 'true' : 'false');
+
+            return mensagem === '';
+        }
+
+       
+        formulario.querySelectorAll('input').forEach(function (input) {
+            input.addEventListener('input', function () {
+                validarCampo(input);
+                mensagemSucesso.style.display = 'none';
+
+               
+                if (input.id === 'senha') {
+                    const confirmacao = document.getElementById('confirmar-senha');
+
+                    if (confirmacao.value !== '') {
+                        validarCampo(confirmacao);
+                    }
+                }
+            });
+
+            input.addEventListener('blur', function () {
+                validarCampo(input);
+            });
+        });
+
+        formulario.addEventListener('submit', function (evento) {
+            evento.preventDefault();
+
+            let formularioValido = true;
+            let primeiroCampoInvalido = null;
+
+            formulario.querySelectorAll('input').forEach(function (input) {
+                const campoValido = validarCampo(input);
+
+                if (!campoValido) {
+                    formularioValido = false;
+
+                    if (!primeiroCampoInvalido) {
+                        primeiroCampoInvalido = input;
+                    }
+                }
+            });
+
+            if (!formularioValido) {
+                mensagemSucesso.style.display = 'none';
+                primeiroCampoInvalido.focus();
+                return;
+            }
+
+            mensagemSucesso.style.display = 'block';
+        });
+
+        
+        document.getElementById('voltar').addEventListener('click', function () {
+            if (window.history.length > 1) {
+                window.history.back();
+            }
+        });
+    </script>
+</body>
+
+</html>
