@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Candidaturas - Primeiro Passo Empresa</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<style>
+/* ===== Estilos comuns (menu, topo, cards) ===== */
+/* ===== Estilos comuns (menu, topo, cards) ===== */
+/* Estilos compartilhados das telas do aluno (mesmo padrão do inicio_aluno.html) */
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:flex;background:#F3F6FB;color:#1F2937;font-family:"Inter",sans-serif;font-weight:450;font-size:15px}
+a,a:hover{text-decoration:none;color:inherit}
+h1,h2,h3,h4,p{margin:0}
+.menu{width:235px;flex-shrink:0;background:#002546;height:100vh;position:sticky;top:0;display:flex;flex-direction:column;align-items:center;padding:24px 14px}
+.menu .logo{width:150px;height:60px;object-fit:contain;margin-bottom:34px}
+.menu ul{list-style:none;margin:0;padding:0;width:100%;display:flex;flex-direction:column;gap:8px}
+.menu a{display:flex;align-items:center;gap:16px;color:#fff;padding:12px 14px;border-radius:8px;font-size:14px}
+.menu a i{font-size:20px;flex-shrink:0}
+.menu a:hover{background:rgba(255,255,255,.1);color:#fff}
+.menu a.ativo{background:#1A80D5;color:#fff}
+.pagina{flex:1;min-width:0;display:flex;flex-direction:column;min-height:100vh}
+.topo{display:flex;align-items:center;gap:20px;background:#fff;padding:14px 24px;border-bottom:1px solid #DDE3EC}
+.busca{flex:1;display:flex;align-items:center;gap:10px;background:#F3F6FB;border:1px solid #DDE3EC;border-radius:30px;padding:0 16px;height:40px;margin:0}
+.busca i{color:#6B7280}
+.busca input{flex:1;min-width:0;border:0;outline:0;background:transparent;font:inherit;font-size:14px}
+.sino{font-size:20px}
+.usuario{position:relative}
+.usuario summary{list-style:none;display:flex;align-items:center;gap:10px;cursor:pointer;font-weight:600}
+.usuario summary::-webkit-details-marker{display:none}
+.usuario summary>i:first-child{font-size:34px}
+.usuario .sub{position:absolute;right:0;top:46px;background:#fff;border:1px solid #DDE3EC;border-radius:10px;box-shadow:0 6px 16px rgba(0,0,0,.12);min-width:160px;padding:6px;z-index:5}
+.usuario .sub a{display:block;padding:9px 12px;border-radius:6px;font-size:14px}
+.usuario .sub a:hover{background:#F3F6FB}
+.conteudo{flex:1;padding:20px 24px}
+.grade{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:20px;align-items:start}
+.col-esq,.col-dir{display:flex;flex-direction:column;gap:20px;min-width:0}
+.card{background:#fff;border:1px solid #DDE3EC;border-radius:14px;box-shadow:0 2px 6px rgba(0,0,0,.08);padding:20px}
+.cab{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:14px}
+.cab h2{font-size:1.1rem;font-weight:600;display:flex;align-items:center;gap:10px}
+.cab h2 i,.perfil-card h3 i{color:#1A80D5}
+.ver-todas{color:#1A80D5!important;font-size:14px;font-weight:600;display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+.btn{display:inline-flex;align-items:center;gap:8px;background:#1A80D5;color:#fff;border-radius:6px;padding:6px 14px;font-size:12px;font-weight:600;border:0}
+.btn:hover{background:#176eb5;color:#fff}
+.btn.vazado{background:#fff;color:#1A80D5;border:1px solid #1A80D5}
+.perfil-card{display:flex;flex-direction:column;gap:14px}
+.perfil-card h3{font-size:1.1rem;font-weight:600;display:flex;align-items:center;gap:10px}
+.perfil-corpo{display:flex;align-items:center;gap:16px}
+.rosca{width:96px;height:96px;border-radius:50%;flex-shrink:0;background:conic-gradient(#1A80D5 calc(var(--p)*1%),#E5E7EB 0);display:flex;align-items:center;justify-content:center}
+.rosca span{width:72px;height:72px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;font-weight:700}
+.perfil-corpo h4{font-size:14px;font-weight:600;margin-bottom:4px}
+.perfil-corpo p{font-size:12px;color:#6B7280;font-weight:350}
+.acesso h3{text-align:center;font-size:1.15rem;font-weight:600;margin-bottom:16px}
+.atalhos{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.atalho{border:1px solid #DDE3EC;border-radius:10px;box-shadow:0 2px 5px rgba(0,0,0,.08);padding:14px 8px;text-align:center}
+.atalho:hover{border-color:#1A80D5}
+.atalho .circ{width:44px;height:44px;border-radius:50%;border:2px solid #1A80D5;color:#1A80D5;display:flex;align-items:center;justify-content:center;font-size:20px;margin:0 auto 8px}
+.atalho h4{font-size:13px;font-weight:600;margin-bottom:4px}
+.atalho p{font-size:11.5px;color:#6B7280;font-weight:350}
+.rodape{padding:0 24px 20px}
+.rodape hr{border-top:1px solid #C9D0DA;margin:10px 0}
+.rodape p{text-align:center;color:#9AA3AF;font-size:12px}
+@media(max-width:1100px){.grade{grid-template-columns:1fr}.col-dir{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}}
+@media(max-width:900px){.menu{width:72px;padding:20px 10px}.menu .logo,.menu a span{display:none}.menu a{justify-content:center;padding:12px}}
+@media(max-width:640px){
+body{flex-direction:column-reverse;padding-bottom:64px}
+.menu{position:fixed;bottom:0;left:0;right:0;width:100%;height:64px;flex-direction:row;padding:0 6px;z-index:10;top:auto}
+.menu ul{flex-direction:row;justify-content:space-around;gap:0}
+.menu li{flex:1}
+.menu a{justify-content:center;padding:10px 0}
+.pagina{min-height:0}
+.topo{padding:12px 16px;gap:14px}
+.usuario summary span{display:none}
+.conteudo{padding:16px}
+.rodape{padding:0 16px 20px}}
+
+.menu .emp-card{margin-top:auto;width:100%;background:rgba(255,255,255,.08);border-radius:10px;padding:12px;color:#fff;display:flex;align-items:center;gap:10px;font-size:12px}
+.menu .emp-card b{display:block;font-size:13px}
+.menu .emp-card .lg{width:34px;height:34px;border-radius:8px;background:#1A80D5;display:flex;align-items:center;justify-content:center;font-weight:700}
+.hero{border-radius:14px;color:#fff;padding:26px 28px;background:linear-gradient(100deg,#002546 40%,#1A80D5);display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.hero h1{font-size:1.5rem;font-weight:700}
+.hero p{opacity:.9;font-size:13.5px;max-width:480px;margin-top:6px}
+.btn.claro{background:#fff;color:#002546}
+.btn.lg2{padding:9px 18px;font-size:13px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.stat{display:flex;gap:12px;align-items:center;padding:16px}
+.stat .ic{width:44px;height:44px;border-radius:10px;font-size:22px;display:flex;align-items:center;justify-content:center;background:#E8F2FC;color:#1A80D5;flex-shrink:0}
+.stat b{font-size:1.5rem;display:block;line-height:1}
+.stat span{font-size:12px;color:#6B7280}
+.tbl-w{overflow-x:auto}
+table.t{width:100%;border-collapse:collapse;font-size:13px}
+.t th{font-size:11.5px;color:#6B7280;text-align:left;font-weight:600;padding:8px 10px;border-bottom:1px solid #DDE3EC;white-space:nowrap}
+.t td{padding:10px;border-bottom:1px solid #EEF1F6;white-space:nowrap}
+.t tr:last-child td{border:0}
+.bd{font-size:11px;font-weight:700;padding:3px 10px;border-radius:10px;display:inline-block}
+.b-verde{background:#E6F6EC;color:#177A44}.b-amarelo{background:#FFF6D6;color:#8A6D00}.b-cinza{background:#E5E7EB;color:#4B5563}.b-azul{background:#E8F2FC;color:#1A80D5}.b-vermelho{background:#FDE8E8;color:#B42323}
+.av{width:34px;height:34px;border-radius:50%;background:#1A80D5;color:#fff;font-weight:700;font-size:12px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;vertical-align:middle;margin-right:8px}
+.ib{border:1px solid #DDE3EC;background:#fff;border-radius:6px;width:28px;height:28px;color:#1A80D5;margin-right:4px}
+.promo{background:linear-gradient(135deg,#002546,#1A80D5);color:#fff;border:0;text-align:center}
+.promo i{font-size:34px}
+.promo h3{font-size:1.05rem;margin:8px 0;font-weight:600}
+.promo p{font-size:12px;opacity:.9;margin-bottom:12px}
+.card h2.t2{font-size:1.05rem;font-weight:600;margin-bottom:12px}
+.res{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;font-size:13px}
+.res li{display:flex;justify-content:space-between;align-items:center}
+.barra{height:8px;background:#E5E7EB;border-radius:6px;overflow:hidden}
+.barra div{height:100%;background:#1A80D5}
+.f{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.f label{display:block;font-size:12px;color:#6B7280;margin:0 0 4px}
+.f input,.f select,.f textarea,.filtros input,.filtros select{width:100%;border:1px solid #DDE3EC;border-radius:8px;padding:8px 10px;font:inherit;font-size:13.5px;background:#fff;outline:0}
+.f input:focus,.f select:focus,.f textarea:focus{border-color:#1A80D5}
+.f .full{grid-column:1/-1}
+.filtros{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+.filtros input{flex:1;min-width:180px}.filtros select{width:auto}
+.pag{display:flex;gap:6px;justify-content:center;margin-top:14px}
+.pag button{width:30px;height:30px;border-radius:6px;border:1px solid #DDE3EC;background:#fff;font-size:12px}
+.pag button.on{background:#1A80D5;color:#fff;border-color:#1A80D5}
+@media(max-width:1100px){.stats{grid-template-columns:1fr 1fr}}
+@media(max-width:900px){.menu .emp-card{display:none}}
+@media(max-width:640px){.f{grid-template-columns:1fr}.stats{grid-template-columns:1fr}.hero h1{font-size:1.25rem}}
+
+/* ===== Estilos desta tela ===== */
+.painel{position:sticky;top:20px;text-align:center}
+.painel .av{width:72px;height:72px;font-size:24px;margin:0 0 10px}
+.painel h3{font-size:1.1rem;font-weight:700}
+.painel .vg{font-size:12.5px;color:#6B7280;margin-bottom:12px}
+.painel ul{list-style:none;margin:0 0 14px;padding:0;text-align:left;font-size:13px;display:flex;flex-direction:column;gap:8px}
+.painel ul i{color:#1A80D5;margin-right:8px}
+.painel .acoes{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.painel .acoes .btn{justify-content:center}
+.btn.verde{background:#22A05A}.btn.verm{background:#E23B3B}
+.lin:hover,.lin.sel{background:#F3F9FF}
+</style>
+</head>
+<body>
+<aside class="menu">
+  <img src="logo.png" class="logo" alt="Primeiro Passo">
+  <nav><ul>
+    <li><a href="inicio_empresa.html"><i class="bi bi-house-door"></i><span>Início</span></a></li>
+    <li><a href="vagas_empresa.html"><i class="bi bi-briefcase"></i><span>Vagas</span></a></li>
+    <li><a href="candidaturas_empresa.html" class="ativo"><i class="bi bi-people-fill"></i><span>Candidaturas</span></a></li>
+    <li><a href="perfil_empresa.html"><i class="bi bi-building"></i><span>Meu Perfil</span></a></li>
+    <li><a href="configuracoes_empresa.html"><i class="bi bi-gear"></i><span>Configurações</span></a></li>
+  </ul></nav>
+  <a href="perfil_empresa.html" class="emp-card"><span class="lg">TS</span><span><b>Tech Solutions</b>Conta empresa</span></a>
+</aside>
+<div class="pagina">
+  <header class="topo">
+    <form class="busca" action="candidaturas_empresa.html" method="get" role="search"><i class="bi bi-search"></i><input type="search" name="q" placeholder="Buscar candidatos ou vagas..."></form>
+    <a href="#" class="sino" aria-label="Notificações"><i class="bi bi-bell"></i></a>
+    <details class="usuario"><summary><i class="bi bi-building"></i><span>Tech Solutions</span><i class="bi bi-caret-down-fill" style="font-size:12px"></i></summary>
+      <div class="sub"><a href="perfil_empresa.html">Perfil da empresa</a><a href="configuracoes_empresa.html">Configurações</a><a href="#">Sair</a></div></details>
+  </header>
+  <main class="conteudo">
+<div class="grade"><div class="col-esq">
+<section class="hero"><div><h1>Candidaturas</h1><p>Veja quem se candidatou às suas vagas, avalie os perfis e acompanhe cada etapa.</p></div></section>
+<div class="stats"><div class="card stat"><div class="ic"><i class="bi bi-people"></i></div><div><b>37</b><span>Total</span></div></div><div class="card stat"><div class="ic"><i class="bi bi-inbox"></i></div><div><b>9</b><span>Novas</span></div></div><div class="card stat"><div class="ic"><i class="bi bi-chat-dots"></i></div><div><b>12</b><span>Em entrevista</span></div></div><div class="card stat"><div class="ic"><i class="bi bi-person-check"></i></div><div><b>5</b><span>Aprovados</span></div></div></div>
+<section class="card"><div class="filtros"><input type="search" id="q" placeholder="Buscar candidato ou vaga..."><select id="st"><option value="">Todos os status</option><option>Nova</option><option>Em análise</option><option>Entrevista</option><option>Aprovado</option><option>Reprovado</option></select></div>
+<div class="tbl-w"><table class="t" id="tb"><thead><tr><th>Candidato</th><th>Vaga</th><th>Data</th><th>Status</th></tr></thead><tbody><tr class="lin" style="cursor:pointer" data-n="Ana Souza" data-v="Estágio em Desenvolvimento Web" data-e="ana.souza@email.com" data-t="(13) 99111-0001" data-c="Itanhaém - SP" data-esc="Ensino Médio Técnico - 2º ano"><td><span class="av">AS</span><b>Ana Souza</b></td><td>Estágio em Desenvolvimento Web</td><td>03/11/2026</td><td class="stc"><span class="bd b-azul">Nova</span></td></tr><tr class="lin" style="cursor:pointer" data-n="Bruno Lima" data-v="Auxiliar de Suporte TI" data-e="bruno.lima@email.com" data-t="(13) 99111-0002" data-c="Praia Grande - SP" data-esc="Ensino Médio completo"><td><span class="av">BL</span><b>Bruno Lima</b></td><td>Auxiliar de Suporte TI</td><td>03/11/2026</td><td class="stc"><span class="bd b-azul">Em análise</span></td></tr><tr class="lin" style="cursor:pointer" data-n="Carla Mendes" data-v="Jovem Aprendiz - Administrativo" data-e="carla.mendes@email.com" data-t="(13) 99111-0003" data-c="Itanhaém - SP" data-esc="Ensino Médio - 3º ano"><td><span class="av">CM</span><b>Carla Mendes</b></td><td>Jovem Aprendiz - Administrativo</td><td>02/11/2026</td><td class="stc"><span class="bd b-amarelo">Entrevista</span></td></tr><tr class="lin" style="cursor:pointer" data-n="Diego Santos" data-v="Estágio em Desenvolvimento Web" data-e="diego.santos@email.com" data-t="(13) 99111-0004" data-c="Peruíbe - SP" data-esc="Superior - Sistemas, 2º sem."><td><span class="av">DS</span><b>Diego Santos</b></td><td>Estágio em Desenvolvimento Web</td><td>01/11/2026</td><td class="stc"><span class="bd b-azul">Em análise</span></td></tr><tr class="lin" style="cursor:pointer" data-n="Eduarda Alves" data-v="Estágio em Análise de Dados" data-e="eduarda.alves@email.com" data-t="(13) 99111-0005" data-c="Santos - SP" data-esc="Superior - ADS, 3º sem."><td><span class="av">EA</span><b>Eduarda Alves</b></td><td>Estágio em Análise de Dados</td><td>30/10/2026</td><td class="stc"><span class="bd b-verde">Aprovado</span></td></tr><tr class="lin" style="cursor:pointer" data-n="Felipe Rocha" data-v="Jovem Aprendiz - Atendimento" data-e="felipe.rocha@email.com" data-t="(13) 99111-0006" data-c="Mongaguá - SP" data-esc="Ensino Médio - 2º ano"><td><span class="av">FR</span><b>Felipe Rocha</b></td><td>Jovem Aprendiz - Atendimento</td><td>29/10/2026</td><td class="stc"><span class="bd b-vermelho">Reprovado</span></td></tr><tr class="lin" style="cursor:pointer" data-n="Gabriela Costa" data-v="Auxiliar de Suporte TI" data-e="gabriela.costa@email.com" data-t="(13) 99111-0007" data-c="Itanhaém - SP" data-esc="Ensino Médio completo"><td><span class="av">GC</span><b>Gabriela Costa</b></td><td>Auxiliar de Suporte TI</td><td>28/10/2026</td><td class="stc"><span class="bd b-amarelo">Entrevista</span></td></tr><tr class="lin" style="cursor:pointer" data-n="Henrique Dias" data-v="Estágio em Marketing Digital" data-e="henrique.dias@email.com" data-t="(13) 99111-0008" data-c="Itanhaém - SP" data-esc="Superior - Publicidade, 4º sem."><td><span class="av">HD</span><b>Henrique Dias</b></td><td>Estágio em Marketing Digital</td><td>27/10/2026</td><td class="stc"><span class="bd b-azul">Nova</span></td></tr></tbody></table></div></section>
+</div><div class="col-dir"><section class="card painel"><div class="av" id="pa">AS</div><h3 id="pn">Ana Souza</h3><div class="vg" id="pv">Estágio em Desenvolvimento Web</div>
+<ul><li><i class="bi bi-envelope"></i><span id="pe">ana.souza@email.com</span></li><li><i class="bi bi-telephone"></i><span id="pt">(13) 99111-0001</span></li><li><i class="bi bi-geo-alt"></i><span id="pc">Itanhaém - SP</span></li><li><i class="bi bi-mortarboard"></i><span id="pesc">Ensino Médio Técnico - 2º ano</span></li></ul>
+<a href="#" class="btn vazado" style="width:100%;justify-content:center;margin-bottom:8px"><i class="bi bi-file-earmark-person"></i> Ver currículo</a>
+<div class="acoes"><button class="btn verde" id="ap">Aprovar</button><button class="btn verm" id="rp">Reprovar</button></div></section></div></div>
+  </main>
+  <footer class="rodape"><hr><p>© 2026 Primeiro Passo · Todos os direitos reservados</p></footer>
+</div>
+<script>
+var sel=null,M={'Aprovado':'verde','Reprovado':'vermelho'};
+function show(r){document.querySelectorAll('.lin').forEach(function(x){x.classList.remove('sel')});r.classList.add('sel');sel=r;var d=r.dataset;
+pn.textContent=d.n;pv.textContent=d.v;pe.textContent=d.e;pt.textContent=d.t;pc.textContent=d.c;pesc.textContent=d.esc;pa.textContent=d.n.split(' ').map(function(p){return p[0]}).slice(0,2).join('')}
+document.querySelectorAll('.lin').forEach(function(r){r.addEventListener('click',function(){show(r)})});
+function mark(s){if(!sel)return;sel.querySelector('.stc').innerHTML='<span class="bd b-'+M[s]+'">'+s+'</span>'}
+ap.onclick=function(){mark('Aprovado')};rp.onclick=function(){mark('Reprovado')};
+var q=document.getElementById('q'),st=document.getElementById('st');
+function f(){document.querySelectorAll('.lin').forEach(function(r){var ok=r.textContent.toLowerCase().indexOf(q.value.toLowerCase())>-1&&(!st.value||r.querySelector('.stc').textContent.trim()===st.value);r.style.display=ok?'':'none'})}
+q.addEventListener('input',f);st.addEventListener('change',f);
+document.querySelector('.lin').classList.add('sel');sel=document.querySelector('.lin');
+</script>
+</body>
+</html>
