@@ -1,0 +1,477 @@
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            font-family: "Inter", sans-serif;
+            color: #1F2937;
+        }
+
+        main {
+            width: 35%;
+            min-height: 100vh;
+            background-color: #002546;
+            display: flex;
+            justify-content: center;
+        }
+
+        .conteudo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 80%;
+        }
+
+        .logo {
+            margin-top: 50px;
+            width: 320px;
+            height: 130px;
+            object-fit: contain;
+            max-width: 100%;
+        }
+
+        main h1 {
+            color: white;
+            text-align: center;
+            width: 90%;
+            font-size: 2rem;
+            margin-top: 10px;
+        }
+
+        .beneficio {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 15px;
+            width: 70%;
+            margin-top: 20px;
+        }
+
+        .icone {
+            background-color: #1A80D5;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .icone img {
+            width: 38px;
+            height: 38px;
+            object-fit: contain;
+        }
+
+        .texto-beneficio {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .texto-beneficio h3 {
+            color: white;
+            margin: 0 0 5px;
+            font-size: 1.4rem;
+        }
+
+        .texto-beneficio p {
+            color: rgba(255, 255, 255, 0.649);
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        .login {
+            flex: 1;
+            min-width: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding: 20px 50px;
+        }
+
+        .login h1 {
+            color: #1F2937;
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        .inter {
+            font-family: "Inter", sans-serif;
+            font-weight: 600;
+        }
+
+        .inter-pequeno {
+            font-family: "Inter", sans-serif;
+            font-weight: 300;
+        }
+
+        .inter-pequeno_maior {
+            font-family: "Inter", sans-serif;
+            font-weight: 350;
+        }
+
+        .inter-medio {
+            font-family: "Inter", sans-serif;
+            font-weight: 450;
+        }
+
+        .subtitulo {
+            color: #1f293797;
+            margin-top: 10px;
+            font-size: 1.25rem;
+        }
+
+        .passos {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .bola {
+            background-color: #DCDDDF;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .bola h3 {
+            color: #1F2937;
+            margin: 0;
+            font-size: 1.75rem;
+        }
+
+        .bola.ativo {
+            background-color: #1A80D5;
+        }
+
+        .bola.ativo h3 {
+            color: white;
+        }
+
+        .linha-passo {
+            background-color: #A4A4A4;
+            flex: 1;
+            height: 1px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-top: 45px;
+            margin-bottom: 20px;
+        }
+
+        form {
+            width: 100%;
+        }
+
+        form>label {
+            color: #1F2937;
+            font-size: 20px;
+            margin-top: 10px;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .campo-cadastro {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 50px;
+            border: 2px solid #CACACA;
+            border-radius: 10px;
+            padding: 0 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+            background-color: white;
+        }
+
+        .campo-cadastro i {
+            color: #777;
+            font-size: 24px;
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+
+        .campo-cadastro input,
+        .campo-cadastro select {
+            width: 100%;
+            min-width: 0;
+            height: 100%;
+            border: none;
+            outline: none;
+            font-size: 18px;
+            background: transparent;
+            font-family: inherit;
+        }
+
+        .grupo-campo {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            min-width: 0;
+        }
+
+        .grupo-campo label {
+            color: #1F2937;
+            margin-top: 10px;
+            margin-bottom: 8px;
+            font-size: 18px;
+        }
+
+        .campo-cadastro2 {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 50px;
+            border: 2px solid #CACACA;
+            border-radius: 10px;
+            padding: 0 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+            background-color: white;
+        }
+
+        .campo-cadastro2 i {
+            color: #777;
+            font-size: 22px;
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+
+        .campo-cadastro2 input {
+            width: 100%;
+            min-width: 0;
+            height: 100%;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            background: transparent;
+            font-family: inherit;
+        }
+
+        .row-campo {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 20px;
+            width: 100%;
+        }
+
+        .opcoes {
+            display: flex;
+            align-items: center;
+            gap: 35px;
+            margin: 10px 0 20px;
+        }
+
+        .opcoes label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 0;
+            font-size: 17px;
+            cursor: pointer;
+        }
+
+        .opcoes input {
+            accent-color: #1A80D5;
+            width: 20px;
+            height: 20px;
+            margin: 0;
+        }
+
+        .botoes-cadastro {
+            display: flex;
+            gap: 40px;
+            width: 100%;
+            margin-top: 60px;
+        }
+
+        .botoes-cadastro button {
+            flex: 1;
+            height: 50px;
+            border-radius: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            font-family: inherit;
+        }
+
+        .btn-voltar {
+            background-color: #fff;
+            color: #2185d5;
+            border: 2px solid #2185d5;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-voltar:hover {
+            color: #2185d5;
+            background-color: #f0f7ff;
+        }
+
+        .btn-avancar {
+            background-color: #2185d5;
+            color: #fff;
+            border: 2px solid #2185d5;
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-avancar:hover {
+            background-color: #176eb5;
+            border-color: #176eb5;
+            color: white;
+        }
+
+        .botoes-cadastro button:active {
+            transform: scale(0.98);
+        }
+
+        .erro-campo {
+            color: #dc3545;
+            font-size: 13px;
+            display: block;
+            margin-top: -15px;
+            margin-bottom: 15px;
+        }
+
+        .erro-campo:empty {
+            display: none;
+        }
+
+        .grupo-campo .erro-campo {
+            margin-top: -14px;
+        }
+
+        .campo-invalido {
+            border-color: #dc3545 !important;
+            box-shadow: 0 0 5px rgba(220, 53, 69, 0.35) !important;
+        }
+
+        .campo-valido {
+            border-color: #28a745 !important;
+            box-shadow: 0 0 5px rgba(40, 167, 69, 0.3) !important;
+        }
+
+        .campo-cadastro2:has(input:disabled) {
+            background-color: #f5f5f5;
+        }
+
+        input:disabled {
+            cursor: not-allowed;
+        }
+
+        .rodape {
+            margin-top: auto;
+            padding-top: 100px;
+            text-align: center;
+        }
+
+        .rodape hr {
+            border-top: 1px solid #A4A4A4;
+            margin: 0 0 10px;
+        }
+
+        .rodape strong {
+            color: #A4A4A4;
+            font-size: 14px;
+        }
+
+        @media (max-width: 992px) {
+            main {
+                width: 32%;
+            }
+
+            .login {
+                padding: 20px 30px;
+            }
+
+            .beneficio {
+                width: 90%;
+            }
+
+            .logo {
+                width: 240px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+
+            main {
+                width: 100%;
+                min-height: auto;
+                padding-bottom: 24px;
+            }
+
+            .logo {
+                margin-top: 24px;
+                height: 90px;
+                width: 220px;
+            }
+
+            .beneficio {
+                display: none;
+            }
+
+            main h1 {
+                font-size: 1.3rem;
+            }
+
+            .login {
+                min-height: auto;
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .row-campo {
+                flex-direction: column;
+                gap: 0;
+            }
+
+            .grupo-campo {
+                width: 100%;
+            }
+
+            .bola {
+                width: 38px;
+                height: 38px;
+            }
+
+            .bola h3 {
+                font-size: 1.2rem;
+            }
+
+            .botoes-cadastro {
+                gap: 14px;
+            }
+
+            .botoes-cadastro button {
+                font-size: 17px;
+            }
+
+            .login h1 {
+                font-size: 1.6rem;
+            }
+
+            .opcoes {
+                gap: 20px;
+            }
+        }
+    

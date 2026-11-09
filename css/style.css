@@ -1,0 +1,416 @@
+body {
+    padding-top: 70px;
+    background-color: #002546;
+}
+
+nav {
+    background-color: #012D54 !important;
+}
+
+.inter {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.inter-pequeno {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.inter-medio {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 450;
+    font-style: normal;
+}
+
+.nav-link {
+    color: rgb(249, 250, 250) !important;
+}
+
+ul {
+    margin-left: 10%;
+}
+
+li {
+    margin-left: 35px;
+}
+
+li a {
+    font-size: 17px !important;
+}
+
+.navbar-brand {
+    margin-left: 22px !important;
+}
+
+.botaos {
+    margin-left: 30px;
+    margin-right: 20px;
+}
+
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 70vh;
+    padding: 40px 60px;
+    gap: 40px;
+}
+
+header .texto {
+    max-width: 520px;
+}
+
+header h1 {
+    font-size: 46px;
+    line-height: 1.15;
+    color: #fff;
+    margin: 0;
+}
+
+header h2 {
+    font-size: 17px;
+    color: #fff;
+    margin-top: 22px;
+    line-height: 1.5;
+}
+
+header .card-hero {
+    width: 400px;
+    height: 360px;
+    background-color: #fff;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+
+.vagas {
+    background-color: #fff !important;
+    padding: 40px 0 60px;
+}
+
+.vagas-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 60px;
+    margin-bottom: 25px;
+}
+
+.vagas-header h3 {
+    color: #1F2937;
+    margin: 0;
+    font-size: 24px;
+}
+
+.vagas-header a {
+    font-size: 16px;
+    color: #1A80D5;
+}
+
+.vagas-cards {
+    display: flex;
+    gap: 30px;
+    padding: 0 60px;
+    margin-bottom: 50px;
+}
+
+.vaga-card {
+    flex: 1;
+    max-width: 340px;
+    background: #fff;
+    border: 1px solid #d1d5db;
+    border-radius: 14px;
+    padding: 16px 18px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+    transition: 0.2s;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.vaga-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.vc-topo {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.vc-topo h4 {
+    font-size: 1rem;
+    margin: 0;
+    color: #1F2937;
+    line-height: 1.25;
+}
+
+.vc-logo {
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.vc-linha {
+    font-size: 13px;
+    color: #1F2937;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.vc-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 4px;
+}
+
+.tag {
+    font-size: 11px;
+    padding: 2px 12px;
+    border-radius: 12px;
+    border: 1px solid transparent;
+}
+
+.tp-azul {
+    background: #E3F0FC;
+    color: #1A80D5;
+    border-color: #1A80D5;
+}
+
+.tp-roxo {
+    background: #EEEBFA;
+    color: #5B4BC4;
+    border-color: #5B4BC4;
+}
+
+.tp-verde {
+    background: #DDF4E7;
+    color: #177A44;
+    border-color: #22A05A;
+}
+
+.tp-cinza {
+    background: #E5E9F0;
+    color: #4B5563;
+}
+
+.vc-rodape {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 6px;
+}
+
+.vc-salario {
+    color: #16A34A;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.vc-seta {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #1A80D5;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.vc-seta:hover {
+    background: #176eb5;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.como-funciona {
+    background-color: #1a81d517;
+    width: calc(100% - 120px);
+    margin: 0 60px;
+    padding: 30px 25px 50px;
+    border: 1px solid #1A80D5;
+    border-radius: 20px;
+}
+
+.como-funciona h3 {
+    color: #1F2937;
+    margin-bottom: 6px;
+}
+
+.como-funciona h5 {
+    color: #1F2937;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+.passos {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.info {
+    text-align: center;
+    max-width: 200px;
+}
+
+.bola {
+    background-color: #1A80D5;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 12px;
+}
+
+.bola h2 {
+    color: #fff;
+    margin: 0;
+    font-size: 22px;
+}
+
+.info h4 {
+    font-size: 17px;
+    margin-bottom: 6px;
+}
+
+.info h6 {
+    font-size: 14px;
+    color: #4B5563;
+    font-weight: 400;
+}
+
+footer {
+    padding: 50px 40px;
+    color: #fff;
+}
+
+footer .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+footer img {
+    height: 80px;
+}
+
+@media (max-width: 1100px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 25px;
+        min-height: auto;
+    }
+
+    header .texto {
+        max-width: 100%;
+    }
+
+    header h1 {
+        font-size: 38px;
+    }
+
+    header .card-hero {
+        width: 100%;
+        max-width: 380px;
+        height: 300px;
+    }
+
+    .vagas-header,
+    .vagas-cards {
+        padding: 0 25px;
+    }
+
+    .vagas-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .vaga-card {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .como-funciona {
+        width: calc(100% - 50px);
+        margin: 0 25px;
+    }
+
+    .passos {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .info {
+        margin-bottom: 25px;
+    }
+
+    ul {
+        margin-left: 0;
+    }
+
+    li {
+        margin-left: 15px;
+    }
+
+    .botaos {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 30px;
+    }
+
+    header h2 {
+        font-size: 15px;
+    }
+
+    .navbar-brand img {
+        width: 130px !important;
+    }
+
+    .nav-link {
+        font-size: 16px !important;
+    }
+
+    .botaos button {
+        width: 90px !important;
+        font-size: 14px;
+    }
+
+    .vagas-header h3 {
+        font-size: 20px;
+    }
+
+    .como-funciona h3 {
+        font-size: 20px;
+    }
+}

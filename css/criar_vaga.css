@@ -1,0 +1,900 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    background: #F3F6FB;
+    color: #1F2937;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    background: #F3F6FB;
+    color: #1F2937;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+}
+     .menu {
+                width: 235px;
+                flex-shrink: 0;
+                background: #002546;
+                height: 100vh;
+                position: sticky;
+                top: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 24px 14px
+            }
+
+.menu .logo {
+    width: 150px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 34px;
+}
+
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.menu li {
+    width: 100%;
+}
+
+.menu a {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    min-height: 51px;
+    color: #FFFFFF;
+    padding: 12px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.menu a i {
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.menu a:hover {
+    background: rgba(255, 255, 255, .1);
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.menu a.ativo {
+    background: #1A80D5;
+    color: #FFFFFF;
+}
+
+.conectando {
+    margin-top: auto;
+    width: 100%;
+    border: 1px solid rgba(26, 128, 213, .6);
+    background: rgba(26, 128, 213, .08);
+    border-radius: 10px;
+    padding: 14px;
+    color: #FFFFFF;
+    font-size: 12px;
+}
+
+.conectando .l1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.conectando .l1 i {
+    font-size: 26px;
+    color: #1A80D5;
+}
+
+.conectando p {
+    margin: 0;
+    color: rgba(255, 255, 255, .75);
+    font-weight: 350;
+}
+
+.pagina {
+    flex: 1;
+    min-width: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 900px) {
+    .menu {
+        width: 72px;
+        min-width: 72px;
+        padding: 20px 10px;
+    }
+
+    .menu .logo,
+    .menu a span,
+    .conectando {
+        display: none;
+    }
+
+    .menu a {
+        justify-content: center;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 640px) {
+    body {
+        flex-direction: column;
+        padding-bottom: 64px;
+    }
+
+    .menu {
+        position: fixed;
+        top: auto;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        min-width: 0;
+        height: 64px;
+        flex-direction: row;
+        padding: 0 6px;
+        z-index: 10;
+    }
+
+    .menu ul {
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 0;
+    }
+
+    .menu li {
+        flex: 1;
+    }
+
+    .menu a {
+        justify-content: center;
+        padding: 10px 0;
+    }
+
+    .pagina {
+        min-height: 0;
+    }
+}
+
+
+/* NOVOS CAMPOS - CRIAR VAGA */
+
+/* SALÁRIO E JORNADA */
+
+.campo .texto-ajuda {
+    color: #6B7280;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.campo input[type="number"] {
+    appearance: textfield;
+    -moz-appearance: textfield;
+}
+
+.campo input[type="number"]::-webkit-inner-spin-button,
+.campo input[type="number"]::-webkit-outer-spin-button {
+    margin: 0;
+}
+
+/* CAMPOS DE SALÁRIO */
+
+.faixa-salarial {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    grid-column: 1 / -1;
+}
+
+.faixa-salarial .campo {
+    width: 100%;
+}
+
+/* BENEFÍCIOS */
+
+.lista-beneficios {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    grid-column: 1 / -1;
+}
+
+.beneficio {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    border: 1px solid #DDE3EC;
+    border-radius: 10px;
+    background: #FFFFFF;
+    cursor: pointer;
+    transition: border-color .2s, background .2s;
+}
+
+.beneficio:hover {
+    border-color: #1A80D5;
+    background: #F5FAFF;
+}
+
+.beneficio:has(input:checked) {
+    border-color: #1A80D5;
+    background: #EAF4FD;
+}
+
+.beneficio input[type="checkbox"] {
+    width: 17px;
+    height: 17px;
+    margin: 0;
+    flex-shrink: 0;
+    accent-color: #1A80D5;
+    cursor: pointer;
+}
+
+.beneficio span {
+    font-size: 13px;
+    font-weight: 500;
+    color: #1F2937;
+}
+
+.beneficio i {
+    font-size: 18px;
+    color: #1A80D5;
+}
+
+/* RESUMO DOS REQUISITOS */
+
+.campo .contador {
+    align-self: flex-end;
+    font-size: 11px;
+    color: #9AA3AF;
+}
+
+.campo input[maxlength],
+.campo textarea[maxlength] {
+    font-family: "Inter", sans-serif;
+}
+
+/* CABEÇALHO DAS NOVAS SEÇÕES */
+
+.bloco .cab {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.bloco .cab h2 {
+    font-size: 17px;
+    font-weight: 600;
+    color: #1F2937;
+    margin-bottom: 5px;
+}
+
+.bloco .cab p {
+    font-size: 12px;
+    color: #6B7280;
+    line-height: 1.5;
+}
+
+.icone-secao {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.icone-secao.azul {
+    background: #E3F0FC;
+    color: #1A80D5;
+}
+
+.icone-secao.roxo {
+    background: #EEEBFA;
+    color: #5B4BC4;
+}
+
+.icone-secao.verde {
+    background: #E2F5EB;
+    color: #22A05A;
+}
+
+.icone-secao.laranja {
+    background: #FFE9D6;
+    color: #F07B1D;
+}
+
+/* AVISO DO FORMULÁRIO */
+
+.aviso {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 18px;
+    padding: 14px 16px;
+    background: #EAF4FD;
+    border: 1px solid #CDE5FA;
+    border-radius: 10px;
+    color: #245A83;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.aviso i {
+    font-size: 17px;
+    flex-shrink: 0;
+}
+
+/* BOTÕES DO FORMULÁRIO */
+
+.botoes-form {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+}
+
+.btn-voltar-topo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: 1px solid #DDE3EC;
+    background: #FFFFFF;
+    border-radius: 8px;
+    padding: 11px 15px;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.btn-voltar-topo:hover {
+    border-color: #1A80D5;
+    color: #1A80D5;
+}
+
+.btn-cancelar {
+    color: #1F2937;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-cancelar:hover {
+    background: #F3F6FB;
+}
+
+.btn-publicar {
+    cursor: pointer;
+}
+
+.btn-publicar:hover:not(:disabled) {
+    background: #176EB5;
+}
+
+/* RESPONSIVIDADE DOS NOVOS CAMPOS */
+
+@media (max-width: 640px) {
+    .faixa-salarial {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .lista-beneficios {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .beneficio {
+        padding: 12px 14px;
+    }
+
+    .botoes-form {
+        flex-direction: column-reverse;
+        align-items: stretch;
+    }
+
+    .btn-cancelar,
+    .btn-publicar {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .btn-voltar-topo {
+        width: 100%;
+    }
+
+    .bloco .cab {
+        align-items: flex-start;
+    }
+}
+
+
+
+.conectando {
+    margin-top: auto;
+    width: 100%;
+    border: 1px solid rgba(26, 128, 213, .6);
+    background: rgba(26, 128, 213, .08);
+    border-radius: 10px;
+    padding: 14px;
+    color: #fff;
+    font-size: 12px;
+}
+
+.conectando .l1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.conectando .l1 i {
+    font-size: 26px;
+    color: #1A80D5;
+}
+
+.conectando p {
+    color: rgba(255, 255, 255, .75);
+    font-weight: 400;
+}
+
+/* PÁGINA */
+
+.pagina {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* CABEÇALHO */
+
+.topo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #fff;
+    padding: 14px 24px;
+    border-bottom: 1px solid #DDE3EC;
+}
+
+.busca {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #F3F6FB;
+    border: 1px solid #DDE3EC;
+    border-radius: 30px;
+    padding: 0 16px;
+    height: 40px;
+    margin: 0;
+}
+
+.busca i {
+    color: #6B7280;
+}
+
+.busca input {
+    flex: 1;
+    min-width: 0;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    font: inherit;
+    font-size: 14px;
+}
+
+.sino {
+    font-size: 22px;
+    color: #1F2937;
+}
+
+/* PERFIL DA EMPRESA */
+
+.usuario {
+    position: relative;
+}
+
+.usuario summary {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.usuario summary::-webkit-details-marker {
+    display: none;
+}
+
+.usuario .av-emp {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #002546;
+    color: #1A80D5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.usuario .nome b {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.usuario .nome small {
+    font-size: 12px;
+    color: #6B7280;
+}
+
+.usuario .sub {
+    position: absolute;
+    right: 0;
+    top: 48px;
+    background: #fff;
+    border: 1px solid #DDE3EC;
+    border-radius: 10px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, .12);
+    min-width: 170px;
+    padding: 6px;
+    z-index: 5;
+}
+
+.usuario .sub a {
+    display: block;
+    padding: 9px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.usuario .sub a:hover {
+    background: #F3F6FB;
+}
+
+.conteudo {
+    flex: 1;
+    padding: 24px;
+    max-width: 1250px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.caminho {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #6B7280;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.caminho a {
+    color: #1A80D5;
+}
+
+.cabecalho-pagina {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 22px;
+}
+
+.cabecalho-pagina h1 {
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+
+.cabecalho-pagina p {
+    font-size: 13px;
+    color: #6B7280;
+}
+
+.btn-voltar {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid #DDE3EC;
+    background: #fff;
+    border-radius: 8px;
+    padding: 11px 15px;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.btn-voltar:hover {
+    border-color: #1A80D5;
+    color: #1A80D5;
+}
+
+.form-vaga {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #DDE3EC;
+    border-radius: 14px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .08);
+    padding: 24px;
+}
+
+.cab {
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #EEF1F6;
+}
+
+.cab h2 {
+    font-size: 17px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cab h2 i {
+    color: #1A80D5;
+    font-size: 20px;
+}
+
+/* CAMPOS */
+
+.campos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+}
+
+.campo.largura-total {
+    grid-column: 1 / -1;
+}
+
+.campo label {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.campo label span {
+    color: #E23B3B;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+    border: 1px solid #DDE3EC;
+    background: #fff;
+    border-radius: 8px;
+    padding: 12px 13px;
+    color: #1F2937;
+    font: inherit;
+    font-size: 13px;
+    outline: none;
+}
+
+.campo textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    border-color: #1A80D5;
+    box-shadow: 0 0 0 3px rgba(26, 128, 213, .12);
+}
+
+.campo input::placeholder,
+.campo textarea::placeholder {
+    color: #9AA3AF;
+}
+
+/* BOTÕES */
+
+.botoes {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.btn-cancelar,
+.btn-publicar {
+    border-radius: 8px;
+    padding: 12px 20px;
+    font: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-cancelar {
+    border: 1px solid #DDE3EC;
+    background: #fff;
+}
+
+.btn-publicar {
+    border: 0;
+    background: #1A80D5;
+    color: #fff;
+}
+
+.btn-publicar:disabled {
+    opacity: .65;
+    cursor: not-allowed;
+}
+
+/* RODAPÉ */
+
+.rodape {
+    padding: 0 24px 20px;
+}
+
+.rodape hr {
+    border: 0;
+    border-top: 1px solid #C9D0DA;
+    margin: 10px 0;
+}
+
+.rodape p {
+    text-align: center;
+    color: #9AA3AF;
+    font-size: 12px;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 900px) {
+    .menu {
+        width: 72px;
+        padding: 20px 10px;
+    }
+
+    .menu .logo,
+    .menu a span,
+    .conectando {
+        display: none;
+    }
+
+    .menu a {
+        justify-content: center;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 640px) {
+    body {
+        flex-direction: column;
+        padding-bottom: 64px;
+    }
+
+    .menu {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 64px;
+        flex-direction: row;
+        padding: 0 6px;
+        z-index: 10;
+        top: auto;
+    }
+
+    .menu nav {
+        width: 100%;
+    }
+
+    .menu ul {
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 0;
+    }
+
+    .menu li {
+        flex: 1;
+    }
+
+    .menu a {
+        justify-content: center;
+        padding: 10px 0;
+    }
+
+    .topo {
+        padding: 12px 16px;
+        gap: 14px;
+    }
+
+    .usuario .nome {
+        display: none;
+    }
+
+    .conteudo {
+        padding: 16px;
+    }
+
+    .cabecalho-pagina {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .campos {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 18px;
+    }
+
+    .rodape {
+        padding: 0 16px 20px;
+    }
+}

@@ -1,0 +1,191 @@
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+        }
+
+        main {
+            width: 50%;
+            min-height: 100vh;
+            background-color: #002546;
+
+            display: flex;
+            justify-content: center;
+        }
+
+        .conteudo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 80%;
+        }
+
+        .logo {
+            margin-top: 50px;
+            width: 320px;
+            height: 130px;
+        }
+
+        main h1 {
+            color: white;
+            text-align: center;
+            width: 90%;
+        }
+
+        .beneficio {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 15px;
+            width: 70%;
+            margin-top: 20px;
+        }
+
+       .icone {
+            background-color: #1A80D5;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+       .icone img {
+            width: 38px;
+            height: 38px;
+            object-fit: contain;
+        } 
+
+        .texto-beneficio {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .texto-beneficio h3 {
+            color: white;
+            margin: 0 0 5px 0;
+        }
+
+        .texto-beneficio p {
+            color: rgba(255, 255, 255, 0.649);
+            margin: 0;
+        }
+
+        .login {
+            width: 50%;
+            min-height: 100vh;
+
+            display: flex;
+            flex-direction: column;
+            padding-left: 80px;
+
+        }
+
+
+        .login h1 {
+            color: #1F2937;
+        }
+
+        .inter {
+            font-family: "Inter", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 600;
+            font-style: normal;
+        }
+
+        .inter-pequeno {
+            font-family: "Inter", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 300;
+            font-style: normal;
+        }
+
+
+        .inter-pequeno_maior {
+            font-family: "Inter", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 350;
+            font-style: normal;
+        }
+
+        .inter-medio {
+            font-family: "Inter", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 450;
+            font-style: normal;
+        }
+
+        .card_principal {
+           
+            border-radius: 30px;
+            padding: 15px;
+            
+        }
+
+        .card_segundario {
+            
+            border-radius: 20px;
+            padding: 15px;
+          
+        }
+
+
+        .email {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 55px;
+            border: 2px solid #CACACA;
+            border-radius: 10px;
+            padding: 0 12px;
+
+
+        }
+
+        .email i {
+            color: #777;
+            font-size: 24px;
+            margin-right: 4px;
+        }
+
+        .email input {
+            width: 100%;
+            height: 100%;
+            border: none;
+            outline: none;
+
+            font-size: 18px;
+        }
+        
+.seta {
+    width: 45px;
+    height: 45px;
+    border: 2px solid #1A80D5;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #1A80D5;
+    font-size: 24px;
+    flex-shrink: 0;
+    margin-left: auto;
+}
+a {
+    all: unset; 
+    flex-direction: row;
+    display: flex;
+    cursor: pointer;
+
+}
+a:hover{
+ all: unset; 
+    flex-direction: row;
+    display: flex;
+       cursor: pointer;
+}
+    
